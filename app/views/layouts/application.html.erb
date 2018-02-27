@@ -30,7 +30,7 @@
                   <%= link_to "Edit profile", edit_user_registration_path,:class=>"dropdown-item" %>
                   <% if current_user.admin? %>
                   <%= link_to "Categories",{ controller: "/categories", action: "index" },:class=>"dropdown-item" %>
-                  <%= link_to "Articles", edit_user_registration_path,:class=>"dropdown-item" %>
+                  <%= link_to "Articles",{ controller: "/articles", action: "index" },:class=>"dropdown-item" %>
                   <% end %>
                 </div>
               </div>

@@ -1,13 +1,14 @@
-<%= form_for(@category) do |f| %>
+<%= form_for(@article) do |f| %>
 
- <% errors_helper(@category) %>
+<%  errors_helper(@article) %>
 
   <div class="form-group row">
-        <%= f.label :name,"Category Name",:class=> "col-sm-2 col-form-label" %><br />
+        <%= f.label :name,"Article Name",:class=> "col-sm-2 col-form-label" %><br />
         <div class="col-sm-10">
                 <%= f.text_field :name , :class=>"form-control" %>
         </div>
    </div>
+
       <div class="form-group row">
             <%= f.label :visible,"Visibility",:class=> "col-sm-2 col-form-label" %><br/>
         <div class="col-sm-10">
@@ -17,13 +18,20 @@
         </div>
       </div>
 
-      <div class="form-group row">
-            <%= f.label :visible,"Display Index",:class=> "col-sm-2 col-form-label" %><br/>
+       <div class="form-group row">
+            <%= f.label :category_id,"Category",:class=> "col-sm-2 col-form-label" %><br/>
                     <div class="col-sm-10">
-                    <%= f.select :lp,1..@counter,{},{:class=>"form-control"} %>
+                    <%= f.select :category_id,@categories.map{|t| [t.name,t.id]},{},{:class=>"form-control"} %>
                 </div>
        </div>
 
+    <div class="form-group row">
+        <%= f.label :content,"Content",:class=> "col-sm-2 col-form-label" %><br />
+        <div class="col-sm-10">
+                <%= f.text_area :content , :class=>"form-control" %>
+        </div>
+   </div>
+     
      
       <div class="form-group row">
         <div class="col-sm-10">
