@@ -1,0 +1,45 @@
+<%= form_for(@category) do |f| %>
+  <% if @category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+      <% @category.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="form-group row">
+        <%= f.label :name,"Category Name",:class=> "col-sm-2 col-form-label" %><br />
+        <div class="col-sm-10">
+                <%= f.text_field :name , :class=>"form-control" %>
+        </div>
+   </div>
+      <div class="form-group row">
+            <%= f.label :visible,"Visibility",:class=> "col-sm-2 col-form-label" %><br/>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <%= f.check_box :visible , :class=>"form-check-input" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+            <%= f.label :visible,"Display Index",:class=> "col-sm-2 col-form-label" %><br/>
+                    <div class="col-sm-10">
+                    <%= f.select :lp,1..@counter,{},{:class=>"form-control"} %>
+                </div>
+       </div>
+
+     
+      <div class="form-group row">
+        <div class="col-sm-10">
+         <%= f.submit :class=>"btn btn-primary" %>
+        </div>
+      </div>
+
+
+<% end %>

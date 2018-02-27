@@ -1,0 +1,25 @@
+
+
+<div style="padding-bottom: 10px;">
+<%= link_to "Add new category", {:action=>'new'}, :class =>'btn btn-mini btn-primary' %>
+</div>
+
+<table class="table table-striped">
+<tr class="info">
+                <th>Display Index</th>
+                <th>Name</th>
+                <th>Visibility</th>
+                <th>Action</th>
+</tr>
+<% @categories.each do |category| %>
+<tr>
+<td><%= category.lp %></td>
+<td><%= category.name %></td>
+<td><%= category.visible %></td>
+<td class="actions"> 
+        <%= link_to("Edit",{:action=>'edit', :id => category.id }, :class =>'btn btn-xs btn-primary') %>
+        <%= link_to("Remove",{:action=>'destroy',:id=>category.id }  , method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger") %>
+</td>
+</tr>
+<% end %>
+</table>

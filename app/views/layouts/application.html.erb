@@ -29,7 +29,7 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <%= link_to "Edit profile", edit_user_registration_path,:class=>"dropdown-item" %>
                   <% if current_user.admin? %>
-                  <%= link_to "Categories", edit_user_registration_path,:class=>"dropdown-item" %>
+                  <%= link_to "Categories",{ controller: "/categories", action: "index" },:class=>"dropdown-item" %>
                   <%= link_to "Articles", edit_user_registration_path,:class=>"dropdown-item" %>
                   <% end %>
                 </div>
@@ -45,10 +45,13 @@
 
           </div>
 
-
-
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
+          <% if notice %>
+          <p class="alert alert-info"> <%= notice %></p>
+          <% end %>
+          
+          <% if alert %>
+          <p class="alert alert-danger"> <%= alert %></p>
+          <% end %>
 
           
   <div class="container">
