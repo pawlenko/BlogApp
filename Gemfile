@@ -28,7 +28,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-gem 'bcrypt',platforms: :ruby
+gem 'bcrypt', platforms: :ruby 
+
+
 
 #add jquery
 gem 'jquery-rails'
@@ -36,6 +38,11 @@ gem 'jquery-rails'
 
 #add bootstrap
 gem 'bootstrap', '~> 4.0.0'
+
+gem 'devise'
+gem 'cancancan', '~> 1.10'
+gem 'rolify'
+
 
 
 # Use Capistrano for deployment
