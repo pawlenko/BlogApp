@@ -43,7 +43,8 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'rolify'
 
-
+#wyswig
+gem 'trix'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
