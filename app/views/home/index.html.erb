@@ -1,2 +1,27 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+  <!-- Page Content -->
+
+    <div class="row">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+
+        <% @articles.each do |article| %>
+
+         <!-- Blog Post -->
+         <div class="card mb-4">
+          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title"> <%= article.name %> </h2>
+            <p class="card-text"><%= truncate(strip_tags(article.content.html_safe),:length=>200) %></p>
+            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on <%= article.created_at %>
+          </div>
+        </div>
+        
+        <% end %>
+      </div>
+    </div>
+    <!-- /.row -->
+
