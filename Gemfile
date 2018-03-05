@@ -49,6 +49,12 @@ gem 'trix'
 #image upload
 gem 'paperclip', '~> 5.2.1'
 
+
+#pagination
+gem 'will_paginate'
+
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
