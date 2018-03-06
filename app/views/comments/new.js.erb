@@ -1,0 +1,5 @@
+$('#new_comment_reply').remove()
+
+if($("#comment-<%=@commentable.id %>").children('#new_comment_reply').length==0){
+$("#comment-<%=@commentable.id %>").append("<%= j render :partial => 'reply' %>");
+}

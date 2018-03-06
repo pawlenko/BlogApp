@@ -2,7 +2,16 @@ Rails.application.routes.draw do
   
   devise_for :users
   resources :categories
-  resources :articles
+ 
+  
+  resources :articles do
+    resources :comments
+  end
+
+  resources :comments do
+    resources :comments
+  end
+
 
   root 'home#index'
 
