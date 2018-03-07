@@ -6,9 +6,13 @@ class Ability
     
     if user.admin?
        can :manage,:all
+    elsif user.client?
+    can :show, Article
+    can :manage,Comment
     else
-      can :show, Article
+       can :show, Article
     end
+
   end
   
 end
