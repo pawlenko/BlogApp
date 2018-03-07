@@ -37,4 +37,6 @@ Example of  Blog  implementation  in RoR.
 # Installation steps
 
 1. Bundle install
+2. Rake db:seed to fill up database with admin Account : admin@admin.com / password  ( You can chcange password in  Profile Editor )
+
 
