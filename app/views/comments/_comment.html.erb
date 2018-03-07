@@ -1,0 +1,19 @@
+    <div id="comment-<%= comment.id %>" class="rounded comments-group border border-primary" style="margin-top:10px;">
+            <div class="comment-content col-md-11 col-sm-10">
+                    <h6 class="small comment-meta"><a href="#"> <%=comment.user.username %> </a> <%= time_ago_in_words(comment.created_at) %> ago</h6>
+                    <div class="comment-body">
+                        <p>
+                                <%=comment.content %>
+                            <br>
+                             <%= link_to "Reply",   new_comment_comment_url(comment, js: true),:class=>"text-right small", :remote => true %>
+                            
+                        </p>
+                    </div>
+
+                </div> 
+            </div>
+            <ul>
+                    <%= render partial: 'comments/comment', collection: comment.comments %>
+            </ul>
+   
+    

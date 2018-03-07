@@ -1,0 +1,4 @@
+<%= form_for [@commentable, Comment.new], :html=>{:id=>"new_comment_reply"} do |f| %>
+<%= f.text_area :content, placeholder: "Add a Reply",:class=>"form-control" %><br/>
+<%= f.submit "Reply" , :class=>"btn btn-primary" %>
+<% end %>
