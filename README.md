@@ -7,20 +7,20 @@ Example of  Blog  implementation  in RoR.
 1. Register
 2. Sing up
 3. Category
-⋅⋅⋅Add category name
-⋅⋅⋅Order category
+    1. Add category name
+    2. Order category
 4. Blog post
-⋅⋅⋅Add content of blog post using WYSIWYG editor
-⋅⋅⋅Add image as blog post header
-⋅⋅⋅Assign blog post to category
+    1. Add content of blog post using WYSIWYG editor
+    2. Add image as blog post header
+    3. Assign blog post to category
 5. Comment
-⋅⋅⋅Add comment to Blog post
-⋅⋅⋅Add reply to other comment
+    1. Add comment to Blog post
+    2. Add reply to other comment
 6. Authentication
 7. Authorization 
 8. User Roles
-⋅⋅⋅Admin role
-⋅⋅⋅Client role
+    1. Admin role
+    2. Client role
 9. Responsive design
 
 ##### Used gems
