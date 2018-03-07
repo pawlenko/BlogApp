@@ -1,5 +1,10 @@
 class CommentsController < ApplicationController
     before_action :find_commentable
+    before_action :authenticate_user!
+
+    def index
+      redirect_back fallback_location: root_path
+    end
 
     def new
       @comment = Comment.new

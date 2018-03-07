@@ -34,7 +34,21 @@ Example of  Blog  implementation  in RoR.
 * Bootstrap
 
 
-# Installation steps
+# Installation
 
-1. Bundle install
+```sh
+bundle install
+rake db:migrate
+rake db:seed 
+```
 
+# Run application
+
+```sh
+rails s
+```
+
+License
+----
+
+MIT
