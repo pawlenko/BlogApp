@@ -5,8 +5,9 @@
                         <p>
                                 <%=comment.content %>
                             <br>
+                            <% if user_signed_in? %>
                              <%= link_to "Reply",   new_comment_comment_url(comment, js: true),:class=>"text-right small", :remote => true %>
-                            
+                            <%  end %>
                         </p>
                     </div>
 
